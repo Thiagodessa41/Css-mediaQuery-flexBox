@@ -1,48 +1,53 @@
-ul{
-    background-color: black;
-    list-style-type: none;
-    padding: 0;
+*{
+    box-sizing: border-box;
+}
+body{
     margin: 0;
-    overflow: hidden;
 }
 
-li{
-    float: left;
+.header{
+    background: rgb(67, 108, 5);
+    padding: 80px;
+    text-align: center;
+    color: aliceblue;
 }
 
-li a, .dropbtn{
-    display: inline-block;
-    color: white;
-    padding: 14px 16px;
+.nav-bar{
+    display: flex;
+    justify-content: center;
+    background:black;
+
+}
+
+.nav-bar a{
+    color: aliceblue;
+    padding: 14px 20px;
     text-decoration: none;
     text-align: center;
 }
 
-li a:hover, .dropdown:hover .dropbtn{
-    background:red;
+.corpo{
+    display: flex;
+    flex-flow: row wrap;
 }
 
-li.dropdown{
-    display: inline-block;
+.card{
+    flex: 48%;
+    background: grey;
+    height: 300px;
+    margin: 1%;
 }
 
-.dropdown-content{
-    display: none;
-    position: absolute;
-    background: white;
-    width: 150px;
-}
-
-.dropdown-content a{
+/*mudar cor qdo mouse estiver encima*/
+.nav-bar a:hover{
+    background:grey;
     color: black;
-    display: block;
-    text-align: left;
+    font-weight: bold;
 }
 
-.dropdown-content a:hover{
-    color:white
-}
-
-.dropdown:hover .dropdown-content{
-    display: block;
+/*qdo tamanho estiver pequeno mudar exibição menu*/
+@media screen and (max-width:700px) {
+    .nav-bar{
+        flex-direction: column;
+    }
 }
